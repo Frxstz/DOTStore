@@ -40,8 +40,8 @@ def extract_roi(image_path, roi):
 print("Loading OCR model...")
 reader = easyocr.Reader(['en'])
 
-# Test on images from .rawtest folder
-data_folder = ".rawtest"
+# Test on images from .data folder (or change to .rawtest)
+data_folder = ".data"
 image_files = glob.glob(os.path.join(data_folder, "*.jpg")) + glob.glob(os.path.join(data_folder, "*.png"))
 
 print(f"\nExtracting text from {len(image_files)} images using EasyOCR:\n")

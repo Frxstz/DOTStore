@@ -1,28 +1,9 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-.venv/
-ENV/
-
-# Environment variables
+.claude
+.cropped
+.data
+.generated
+.rawtest
+.venv
+old
 .env
-
-# IDE
-.vscode/
-.idea/
-.claude/
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
 nul
-
-# CSV data files (optional - uncomment if you don't want to track data)
-# *.csv
