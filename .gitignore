@@ -1,0 +1,43 @@
+# Model files (too large for GitHub)
+*.h5
+*.pkl
+*.pth
+*.ckpt
+*.pb
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Data directories
+data/
+.data/
+datasets/
+old/
+.cropped/
+.rawtest/
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+nul
+
+# CSV data files (optional - uncomment if you don't want to track data)
+# *.csv
