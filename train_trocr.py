@@ -24,12 +24,12 @@ with open(labels_file, 'r', encoding='utf-8') as f:
 
 print(f"Loaded {len(image_files)} training samples")
 
-# Reduce dataset size for faster training on CPU
-max_samples = 10000
-if len(image_files) > max_samples:
-    image_files = image_files[:max_samples]
-    labels_text = labels_text[:max_samples]
-    print(f"Reduced to {len(image_files)} samples for faster CPU training")
+# Uncomment below to reduce dataset size for faster CPU training
+# max_samples = 10000
+# if len(image_files) > max_samples:
+#     image_files = image_files[:max_samples]
+#     labels_text = labels_text[:max_samples]
+#     print(f"Reduced to {len(image_files)} samples for faster CPU training")
 
 class OCRDataset(Dataset):
     def __init__(self, image_files, labels, processor):
@@ -99,7 +99,7 @@ val_dataloader = DataLoader(val_dataset, batch_size=8, shuffle=False, num_worker
 optimizer = torch.optim.AdamW(model.parameters(), lr=5e-5)
 
 # Fine-tune
-epochs = 3
+epochs = 5
 print(f"\nFine-tuning for {epochs} epochs...")
 
 for epoch in range(epochs):
